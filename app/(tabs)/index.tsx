@@ -3,13 +3,9 @@ import { Text, View } from "react-native";
 export default function Index() {
   return (
     <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
+      className="flex-1"
     >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
+      <Text className="text-dark text-center text-2xl mt-20">Home Screen</Text>
     </View>
   );
 }

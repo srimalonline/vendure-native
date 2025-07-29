@@ -5,7 +5,19 @@ import { moderateScale } from 'react-native-size-matters'
 
 export default function TabsLayout(){
   return (
-    <Tabs>
+    <Tabs
+      screenOptions={{
+        tabBarActiveTintColor: '#000',
+        tabBarInactiveTintColor: '#888',
+        tabBarStyle: {
+          paddingBottom: 0,
+          paddingTop: 0,
+        },
+        tabBarLabelStyle: {
+          fontSize: moderateScale(12, 0.1),
+          marginBottom: moderateScale(5, 0.1),
+        }
+      }}>
       <Tabs.Screen 
         name="index" 
         options={{ 

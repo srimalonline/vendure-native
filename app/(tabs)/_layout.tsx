@@ -1,5 +1,7 @@
+import { Entypo } from '@expo/vector-icons'
 import { Tabs } from 'expo-router'
 import React from 'react'
+import { moderateScale } from 'react-native-size-matters'
 
 export default function TabsLayout(){
   return (
@@ -8,11 +10,41 @@ export default function TabsLayout(){
         name="index" 
         options={{ 
           title: "Home",  
-          headerShown: false,}}
+          headerShown: false,
+          tabBarIcon: ({ color }) => (
+            <Entypo name="home" size={moderateScale(23, 0.1)} color={color} />
+          ),
+        }}
       />
       <Tabs.Screen 
-        name="settings" 
-        options={{ title: "Settings" }} 
+        name="category" 
+        options={{ 
+          title: "Category",  
+          headerShown: false,
+          tabBarIcon: ({ color }) => (
+            <Entypo name="grid" size={moderateScale(23, 0.1)} color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen 
+        name="cart" 
+        options={{ 
+          title: "Cart",  
+          headerShown: false,
+          tabBarIcon: ({ color }) => (
+            <Entypo name="shopping-cart" size={moderateScale(23, 0.1)} color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen 
+        name="profile" 
+        options={{ 
+          title: "Profile",  
+          headerShown: false,
+          tabBarIcon: ({ color }) => (
+            <Entypo name="user" size={moderateScale(23, 0.1)} color={color} />
+          ),
+        }}
       />
     </Tabs>
   )
